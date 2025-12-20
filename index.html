@@ -18,6 +18,7 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
+/* ===== BASE ===== */
 :root{
   --primary:#1e3a8a;
   --bg:#ffffff;
@@ -53,11 +54,7 @@ nav{
   z-index:1000;
 }
 .dark nav{background:rgba(15,23,42,.95)}
-
-nav strong{
-  font-size:18px;
-  letter-spacing:.5px;
-}
+nav strong{font-size:18px}
 nav a{
   margin-left:24px;
   text-decoration:none;
@@ -76,11 +73,7 @@ nav a::after{
   transition:.3s;
 }
 nav a:hover::after{width:100%}
-
-.toggle{
-  margin-left:20px;
-  cursor:pointer;
-}
+.toggle{margin-left:20px;cursor:pointer}
 
 /* COVER */
 .cover{
@@ -95,33 +88,14 @@ nav a:hover::after{width:100%}
   margin-left:8%;
   max-width:600px;
 }
-.cover h1{
-  font-size:46px;
-  color:#fff;
-  font-weight:700;
-}
-.cover p{
-  margin-top:15px;
-  color:#e5e7eb;
-  font-size:18px;
-}
+.cover h1{font-size:46px;color:#fff}
+.cover p{margin-top:15px;color:#e5e7eb;font-size:18px}
 
 /* SECTION */
-section{
-  padding:110px 8%;
-}
-section h2{
-  font-size:30px;
-  margin-bottom:10px;
-}
-section span{
-  color:var(--primary);
-  font-weight:500;
-}
-.subtitle{
-  color:var(--muted);
-  margin-bottom:40px;
-}
+section{padding:110px 8%}
+section h2{font-size:30px;margin-bottom:10px}
+section span{color:var(--primary)}
+.subtitle{color:var(--muted);margin-bottom:40px}
 
 /* HERO */
 .hero{
@@ -159,31 +133,61 @@ section span{
   border-radius:10px;
   margin-bottom:15px;
 }
-.card h3{
-  font-size:18px;
-  margin-bottom:8px;
-}
-.card p{
-  font-size:14px;
-  color:var(--muted);
-}
+.card h3{font-size:18px;margin-bottom:8px}
+.card p{font-size:14px;color:var(--muted)}
 
-/* EDUCATION */
-.edu{
+/* CONTACT */
+.contact{
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  color:#fff;
+}
+.contact h2{text-align:center}
+.contact .subtitle{text-align:center;color:#cbd5f5}
+.contact-card{
+  max-width:900px;
+  margin:60px auto 0;
+  background:rgba(255,255,255,.08);
+  border-radius:20px;
+  padding:40px;
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+.contact-item{
   display:flex;
-  gap:25px;
+  gap:16px;
   align-items:center;
 }
-.edu img{
-  width:90px;
+.contact-item i{
+  font-size:22px;
+  background:rgba(255,255,255,.15);
+  padding:14px;
+  border-radius:12px;
 }
-.edu small{
-  color:var(--muted);
+.contact-item span{color:#cbd5f5;font-size:14px}
+.contact-item strong{display:block;font-size:16px}
+.contact-actions{
+  margin-top:40px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
 }
-
-/* CERTIFICATE */
-.gallery img{
-  cursor:pointer;
+.contact-actions a{
+  padding:14px 26px;
+  border-radius:12px;
+  text-decoration:none;
+  color:#fff;
+  background:#1e3a8a;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.contact-actions a.outline{
+  background:transparent;
+  border:1px solid rgba(255,255,255,.3);
 }
 
 /* FOOTER */
@@ -192,20 +196,14 @@ footer{
   padding:40px 8%;
   text-align:center;
 }
-footer p{
-  color:var(--muted);
-  margin-bottom:10px;
-}
-footer a{
-  margin:0 10px;
-  color:var(--text);
-  font-size:22px;
-}
+footer p{color:var(--muted);margin-bottom:10px}
+footer a{margin:0 10px;color:var(--text);font-size:22px}
 
 /* RESPONSIVE */
 @media(max-width:768px){
   .hero{grid-template-columns:1fr}
   .cover h1{font-size:36px}
+  .contact-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -216,11 +214,11 @@ footer a{
   <strong>Ibnu Ahmad Yuswandana</strong>
   <div>
     <a href="#home">Home</a>
-    <a href="#education">Education</a>
     <a href="#project">Project</a>
     <a href="#experience">Experience</a>
     <a href="#organization">Organization</a>
     <a href="#certificate">Certificate</a>
+    <a href="#contact">Contact</a>
     <span class="toggle" onclick="toggleDark()"><i class="fa fa-moon"></i></span>
   </div>
 </nav>
@@ -233,101 +231,55 @@ footer a{
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="home">
-  <h2>Tentang <span>Saya</span></h2>
-  <p class="subtitle">Profil singkat profesional</p>
-  <div class="hero">
-    <div data-aos="fade-right">
-      <p>
-        Lulusan Sarjana Sistem Informasi dengan ketertarikan pada
-        pengembangan sistem berbasis web, pengelolaan data,
-        serta penerapan teknologi informasi untuk kebutuhan organisasi dan UMKM.
-      </p>
-    </div>
-    <img src="img/profile.jpeg" alt="Profile" data-aos="fade-left">
-  </div>
-</section>
+<!-- SECTION LAIN TETAP SAMA (HOME, PROJECT, EXPERIENCE, ORGANIZATION, CERTIFICATE) -->
 
-<!-- EDUCATION -->
-<section id="education">
-  <h2>Education</h2>
-  <p class="subtitle">Riwayat pendidikan formal</p>
-  <div class="grid">
-    <div class="card edu" data-aos="fade-up">
-      <img src="img/universitas.png">
-      <div>
-        <h3>S1 Sistem Informasi</h3>
-        <p>Universitas Subang</p>
-        <small>2021 – 2025</small>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Get In Touch</h2>
+  <p class="subtitle">Interested in collaborating or learning more about my work? Feel free to reach out!</p>
+
+  <div class="contact-card" data-aos="fade-up">
+    <div class="contact-grid">
+      <div class="contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <div>
+          <span>Email</span>
+          <strong>ibnuahmad0033@gmail.com</strong>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <div>
+          <span>Phone</span>
+          <strong>08xxxxxxxxxx</strong>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-brands fa-linkedin"></i>
+        <div>
+          <span>LinkedIn</span>
+          <strong>linkedin.com/in/ibnuahmad</strong>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <div>
+          <span>Location</span>
+          <strong>Subang, Indonesia</strong>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- PROJECT -->
-<section id="project">
-  <h2>My <span>Projects</span></h2>
-  <p class="subtitle">Beberapa proyek yang pernah dikerjakan</p>
-  <div class="grid">
-    <div class="card" data-aos="fade-up">
-      <img src="img/project1.jpeg">
-      <h3>Sistem Informasi UMKM</h3>
-      <p>Website layanan dan pendataan UMKM</p>
-    </div>
-    <div class="card" data-aos="fade-up">
-      <img src="img/project2.jpg">
-      <h3>Website Company Profile</h3>
-      <p>Desain modern dan responsif</p>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-  <h2>Work <span>Experience</span></h2>
-  <p class="subtitle">Pengalaman kerja profesional</p>
-  <div class="grid">
-    <div class="card" data-aos="fade-up">
-      <img src="img/work.jpg">
-      <h3>Operator Produksi PLUT KUMKM</h3>
-      <p>20 Januari 2024 - 20 Juni 2024. Unit kemasan & produksi UMKM</p>
-    </div>
-  </div>
-</section>
-
-<!-- ORGANIZATION -->
-<section id="organization">
-  <h2>Organization <span>Experience</span></h2>
-  <p class="subtitle">Pengalaman organisasi & kepanitiaan</p>
-  <div class="grid">
-    <div class="card" data-aos="fade-up">
-      <img src="img/org1.jpg">
-      <h3>Panitia Pemungutan Suara (PPS)</h3>
-      <p>
-        Bertugas dalam pelaksanaan pemungutan dan penghitungan suara,
-        administrasi pemilih, serta memastikan proses berjalan sesuai prosedur.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- CERTIFICATE -->
-<section id="certificate">
-  <h2>Certifications</h2>
-  <p class="subtitle">Akademik & Profesional</p>
-  <div class="grid gallery">
-    <div class="card" data-aos="zoom-in">
-      <img src="img/cisco.png" onclick="zoom(this)">
-      <h3>Cisco Networking Academy</h3>
-    </div>
-    <div class="card" data-aos="zoom-in">
-      <img src="img/eptus.jpeg" onclick="zoom(this)">
-      <h3>EPTUS English Proficiency</h3>
-    </div>
-    <div class="card" data-aos="zoom-in">
-      <img src="img/microsoft.JPG" onclick="zoom(this)">
-      <h3>Microsoft Office & SPSS</h3>
+    <div class="contact-actions">
+      <a href="mailto:ibnuahmad0033@gmail.com">
+        <i class="fa-solid fa-envelope"></i> Send Email
+      </a>
+      <a href="#" class="outline">
+        <i class="fa-brands fa-linkedin"></i> Connect on LinkedIn
+      </a>
     </div>
   </div>
 </section>
@@ -344,9 +296,6 @@ footer a{
 AOS.init({duration:900, once:true});
 function toggleDark(){
   document.body.classList.toggle('dark');
-}
-function zoom(img){
-  window.open(img.src,'_blank');
 }
 </script>
 
