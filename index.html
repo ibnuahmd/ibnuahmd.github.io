@@ -1,17 +1,261 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Ibnu Ahmad Yuswandana</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Ibnu Ahmad Yuswandana | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#1f2937;
+      --primary:#2563eb;
+      --card:#f3f4f6;
+    }
+    body.dark{
+      --bg:#0f172a;
+      --text:#e5e7eb;
+      --card:#1e293b;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      scroll-behavior:smooth;
+    }
+
+    /* Navbar */
+    nav{
+      position:fixed;
+      top:0;left:0;width:100%;
+      background:var(--bg);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:16px 40px;
+      box-shadow:0 4px 20px rgba(0,0,0,.05);
+      z-index:1000;
+    }
+    nav a{
+      margin-left:20px;
+      text-decoration:none;
+      color:var(--text);
+      font-weight:500;
+      position:relative;
+    }
+    nav a::after{
+      content:'';
+      position:absolute;
+      left:0;bottom:-6px;
+      width:0;height:2px;
+      background:var(--primary);
+      transition:.3s;
+    }
+    nav a:hover::after{width:100%}
+    .toggle{
+      cursor:pointer;
+      padding:6px 12px;
+      border:1px solid var(--primary);
+      border-radius:20px;
+      color:var(--primary);
+      margin-left:20px;
+    }
+
+    /* Hero */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:120px 20px 40px;
+    }
+    .hero-box{
+      max-width:900px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+    .hero img{
+      width:100%;
+      border-radius:20px;
+    }
+    .hero h1{
+      font-size:42px;
+      font-weight:700;
+    }
+    .hero p{
+      margin:16px 0;
+      opacity:.8;
+    }
+
+    section{
+      padding:80px 40px;
+      max-width:1100px;
+      margin:auto;
+    }
+    h2{
+      font-size:32px;
+      margin-bottom:30px;
+      color:var(--primary);
+    }
+
+    /* Cards */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+    }
+    .card{
+      background:var(--card);
+      padding:20px;
+      border-radius:16px;
+      transition:.3s;
+    }
+    .card:hover{
+      transform:translateY(-6px);
+    }
+    .card img{
+      width:100%;
+      border-radius:12px;
+      margin-bottom:12px;
+    }
+
+    /* Gallery */
+    .gallery img{
+      cursor:pointer;
+    }
+    .modal{
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.8);
+      justify-content:center;
+      align-items:center;
+      z-index:2000;
+    }
+    .modal img{
+      max-width:90%;
+      max-height:90%;
+      border-radius:12px;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px;
+      opacity:.7;
+    }
+
+    @media(max-width:768px){
+      .hero-box{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Hello, Ibnu Ahmad 👋</h1>
-    <p>Website ini berhasil jalan.</p>
+<!-- NAVBAR -->
+<nav>
+  <strong>Ibnu Ahmad</strong>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#cert">Certificates</a>
+    <span class="toggle" onclick="toggleDark()">🌙</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-box" data-aos="fade-up">
+    <div>
+      <h1>Ibnu Ahmad Yuswandana</h1>
+      <p>Sarjana Sistem Informasi (S1)  
+      Fokus pada pengembangan web dan sistem informasi.</p>
+    </div>
+    <img src="img/profile.jpg" alt="Profile">
+  </div>
+</section>
+
+<!-- PROJECT -->
+<section id="projects">
+  <h2 data-aos="fade-right">My Projects</h2>
+  <div class="grid">
+    <div class="card" data-aos="zoom-in">
+      <img src="img/project1.jpg">
+      <h3>Sistem Informasi UMKM</h3>
+      <p>Website layanan konsultasi dan penjadwalan.</p>
+    </div>
+    <div class="card" data-aos="zoom-in">
+      <img src="img/project2.jpg">
+      <h3>Payroll & Absensi</h3>
+      <p>Presensi berbasis geolocation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2 data-aos="fade-right">Experience</h2>
+  <div class="grid">
+    <div class="card" data-aos="fade-up">
+      <h3>Operator Produksi – PLUT KUMKM</h3>
+      <p>Mengelola proses produksi & pengemasan UMKM.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATE -->
+<section id="cert">
+  <h2 data-aos="fade-right">Certifications</h2>
+  <div class="grid gallery">
+    <div class="card" data-aos="zoom-in">
+      <img src="img/cisco.png" onclick="openImg(this)">
+      <p>Cisco Networking Academy (CCNA)</p>
+    </div>
+    <div class="card" data-aos="zoom-in">
+      <img src="img/eptus.jpeg" onclick="openImg(this)">
+      <p>EPTUS English Proficiency</p>
+    </div>
+    <div class="card" data-aos="zoom-in">
+      <img src="img/microsoft.jpg" onclick="openImg(this)">
+      <p>Microsoft Office & SPSS</p>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="this.style.display='none'">
+  <img id="modalImg">
+</div>
+
+<footer>
+  © 2025 Ibnu Ahmad Yuswandana
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ once:true, duration:900 });
+
+  function toggleDark(){
+    document.body.classList.toggle('dark');
+  }
+  function openImg(el){
+    document.getElementById('modal').style.display='flex';
+    document.getElementById('modalImg').src = el.src;
+  }
+</script>
 
 </body>
 </html>
