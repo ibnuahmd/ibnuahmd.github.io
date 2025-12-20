@@ -4,144 +4,204 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ibnu Ahmad Yuswandana | Portfolio</title>
-<meta name="description" content="Portfolio Ibnu Ahmad Yuswandana - Sarjana Sistem Informasi">
+
+<meta name="description" content="Portfolio resmi Ibnu Ahmad Yuswandana, Sarjana Sistem Informasi">
 <meta name="author" content="Ibnu Ahmad Yuswandana">
 
-<!-- AOS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 <style>
-:root {
-  --primary:#2563eb;
+:root{
+  --primary:#1e3a8a;
   --bg:#ffffff;
   --text:#1f2937;
-  --card:#f3f4f6;
+  --muted:#6b7280;
+  --card:#f8fafc;
 }
-.dark {
+.dark{
   --bg:#0f172a;
   --text:#e5e7eb;
+  --muted:#9ca3af;
   --card:#1e293b;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{
-  font-family:Segoe UI, sans-serif;
+  font-family:'Inter',sans-serif;
   background:var(--bg);
   color:var(--text);
-  scroll-behavior:smooth;
+  line-height:1.6;
 }
 
 /* NAVBAR */
 nav{
   position:fixed;
-  top:0;left:0;
+  top:0;
   width:100%;
-  background:rgba(255,255,255,.9);
+  background:rgba(255,255,255,.95);
   backdrop-filter:blur(10px);
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 40px;
+  padding:18px 8%;
   z-index:1000;
 }
-.dark nav{background:rgba(15,23,42,.9)}
+.dark nav{background:rgba(15,23,42,.95)}
+
+nav strong{
+  font-size:18px;
+  letter-spacing:.5px;
+}
 nav a{
-  margin:0 12px;
+  margin-left:24px;
   text-decoration:none;
   color:var(--text);
-  font-weight:500;
+  font-size:14px;
+  position:relative;
 }
-nav a:hover{color:var(--primary)}
+nav a::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0;
+  height:2px;
+  background:var(--primary);
+  transition:.3s;
+}
+nav a:hover::after{width:100%}
+
 .toggle{
+  margin-left:20px;
   cursor:pointer;
-  font-size:20px;
 }
 
 /* COVER */
 .cover{
   height:100vh;
   background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    linear-gradient(rgba(15,23,42,.75),rgba(15,23,42,.75)),
     url('cover.jpg') center/cover no-repeat;
   display:flex;
-  justify-content:center;
   align-items:center;
-  text-align:center;
-  color:#fff;
 }
-.cover h1{font-size:48px}
-.cover p{margin:15px 0 30px;font-size:18px}
-.cover a{
-  padding:12px 28px;
-  background:var(--primary);
+.cover .content{
+  margin-left:8%;
+  max-width:600px;
+}
+.cover h1{
+  font-size:46px;
   color:#fff;
-  border-radius:30px;
-  text-decoration:none;
+  font-weight:700;
+}
+.cover p{
+  margin-top:15px;
+  color:#e5e7eb;
+  font-size:18px;
 }
 
 /* SECTION */
-section{padding:100px 10%}
-h2{text-align:center;margin-bottom:40px}
+section{
+  padding:110px 8%;
+}
+section h2{
+  font-size:30px;
+  margin-bottom:10px;
+}
+section span{
+  color:var(--primary);
+  font-weight:500;
+}
+.subtitle{
+  color:var(--muted);
+  margin-bottom:40px;
+}
 
 /* HERO */
 .hero{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
+  grid-template-columns:2fr 1fr;
+  gap:50px;
   align-items:center;
 }
 .hero img{
   width:100%;
-  max-width:280px;
-  border-radius:20px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
 }
 
 /* CARD */
 .card{
   background:var(--card);
-  padding:20px;
-  border-radius:15px;
+  padding:25px;
+  border-radius:14px;
   transition:.3s;
 }
-.card:hover{transform:translateY(-5px)}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+.card img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:15px;
+}
+.card h3{
+  font-size:18px;
+  margin-bottom:8px;
+}
+.card p{
+  font-size:14px;
+  color:var(--muted);
 }
 
-/* GALLERY */
+/* CERTIFICATE */
 .gallery img{
-  width:100%;
-  border-radius:12px;
   cursor:pointer;
 }
 
 /* FOOTER */
 footer{
+  background:var(--card);
+  padding:40px 8%;
   text-align:center;
-  padding:40px;
 }
-footer a{margin:0 10px;color:var(--text);font-size:22px}
+footer p{
+  color:var(--muted);
+  margin-bottom:10px;
+}
+footer a{
+  margin:0 10px;
+  color:var(--text);
+  font-size:22px;
+}
 
 /* RESPONSIVE */
 @media(max-width:768px){
-  .hero{grid-template-columns:1fr;text-align:center}
+  .hero{grid-template-columns:1fr}
+  .cover h1{font-size:36px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
   <strong>Ibnu Ahmad Yuswandana</strong>
   <div>
-    <a href="#cover">Cover</a>
     <a href="#home">Home</a>
     <a href="#project">Project</a>
     <a href="#experience">Experience</a>
@@ -151,82 +211,95 @@ footer a{margin:0 10px;color:var(--text);font-size:22px}
 </nav>
 
 <!-- COVER -->
-<section class="cover" id="cover">
-  <div data-aos="fade-up">
+<section class="cover">
+  <div class="content" data-aos="fade-up">
     <h1>Ibnu Ahmad Yuswandana</h1>
-    <p>Sarjana Sistem Informasi</p>
-    <a href="#home">Lihat Portfolio</a>
+    <p>Sarjana Sistem Informasi<br>Web • Sistem Informasi • Data</p>
   </div>
 </section>
 
-<!-- HERO -->
+<!-- ABOUT -->
 <section id="home">
+  <h2>Tentang <span>Saya</span></h2>
+  <p class="subtitle">Profil singkat profesional</p>
   <div class="hero">
     <div data-aos="fade-right">
-      <h2>Tentang Saya</h2>
-      <p>Lulusan Sistem Informasi dengan minat pada web, data, dan sistem informasi.</p>
+      <p>
+        Lulusan Sarjana Sistem Informasi dengan ketertarikan pada
+        pengembangan sistem berbasis web, pengelolaan data,
+        serta penerapan teknologi informasi untuk kebutuhan organisasi dan UMKM.
+      </p>
     </div>
-    <div data-aos="fade-left">
-      <img src="profile.jpg" alt="Ibnu Ahmad">
-    </div>
+    <img src="img/profile.jpg" alt="Profile" data-aos="fade-left">
   </div>
 </section>
 
 <!-- PROJECT -->
 <section id="project">
-  <h2>My Projects</h2>
+  <h2>My <span>Projects</span></h2>
+  <p class="subtitle">Beberapa proyek yang pernah dikerjakan</p>
   <div class="grid">
-    <div class="card" data-aos="zoom-in">
-      <img src="img/project1.jpeg" width="100%">
-      <h3>Website UMKM</h3>
+    <div class="card" data-aos="fade-up">
+      <img src="img/project1.jpg">
+      <h3>Sistem Informasi UMKM</h3>
+      <p>Website layanan dan pendataan UMKM</p>
     </div>
-    <div class="card" data-aos="zoom-in">
-      <img src="project2.jpg" width="100%">
-      <h3>Sistem Informasi</h3>
+    <div class="card" data-aos="fade-up">
+      <img src="img/project2.jpg">
+      <h3>Website Company Profile</h3>
+      <p>Desain modern dan responsif</p>
     </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <h2>Experience</h2>
+  <h2>Work <span>Experience</span></h2>
+  <p class="subtitle">Pengalaman kerja dan organisasi</p>
   <div class="grid">
     <div class="card" data-aos="fade-up">
-      <img src="experience.jpg" width="100%">
-      <h3>Operator Produksi PLUT</h3>
-      <p>Pengelolaan unit kemasan UMKM</p>
+      <img src="experience.jpg">
+      <h3>Operator Produksi PLUT KUMKM</h3>
+      <p>Unit kemasan & produksi UMKM</p>
     </div>
   </div>
 </section>
 
 <!-- CERTIFICATE -->
 <section id="certificate">
-  <h2>Certificates</h2>
+  <h2>Certifications</h2>
+  <p class="subtitle">Akademik & Profesional</p>
   <div class="grid gallery">
-    <img src="img/cisco.png" onclick="zoom(this)">
-    <img src="img/eptus.jpeg" onclick="zoom(this)">
-    <img src="img/microsoft.jpg" onclick="zoom(this)">
+    <div class="card" data-aos="zoom-in">
+      <img src="img/cisco.png" onclick="zoom(this)">
+      <h3>Cisco Networking Academy</h3>
+    </div>
+    <div class="card" data-aos="zoom-in">
+      <img src="img/eptus.jpeg" onclick="zoom(this)">
+      <h3>EPTUS English Proficiency</h3>
+    </div>
+    <div class="card" data-aos="zoom-in">
+      <img src="img/microsoft.jpg" onclick="zoom(this)">
+      <h3>Microsoft Office & SPSS</h3>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>Contact</p>
+  <p>© 2025 Ibnu Ahmad Yuswandana</p>
   <a href="#"><i class="fab fa-github"></i></a>
   <a href="#"><i class="fab fa-linkedin"></i></a>
   <a href="#"><i class="fab fa-instagram"></i></a>
 </footer>
 
-<!-- SCRIPTS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-AOS.init({duration:1000,once:true});
-
+AOS.init({duration:900, once:true});
 function toggleDark(){
-  document.body.classList.toggle("dark");
+  document.body.classList.toggle('dark');
 }
 function zoom(img){
-  window.open(img.src,"_blank");
+  window.open(img.src,'_blank');
 }
 </script>
 
