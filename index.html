@@ -18,7 +18,6 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
-/* ===== BASE ===== */
 :root{
   --primary:#1e3a8a;
   --bg:#ffffff;
@@ -136,6 +135,15 @@ section span{color:var(--primary)}
 .card h3{font-size:18px;margin-bottom:8px}
 .card p{font-size:14px;color:var(--muted)}
 
+/* EDUCATION */
+.edu{
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+.edu img{width:90px}
+.edu small{color:var(--muted)}
+
 /* CONTACT */
 .contact{
   background:linear-gradient(135deg,#0f172a,#1e293b);
@@ -214,6 +222,7 @@ footer a{margin:0 10px;color:var(--text);font-size:22px}
   <strong>Ibnu Ahmad Yuswandana</strong>
   <div>
     <a href="#home">Home</a>
+    <a href="#education">Education</a>
     <a href="#project">Project</a>
     <a href="#experience">Experience</a>
     <a href="#organization">Organization</a>
@@ -231,55 +240,107 @@ footer a{margin:0 10px;color:var(--text);font-size:22px}
   </div>
 </section>
 
-<!-- SECTION LAIN TETAP SAMA (HOME, PROJECT, EXPERIENCE, ORGANIZATION, CERTIFICATE) -->
+<!-- HOME -->
+<section id="home">
+  <h2>Tentang <span>Saya</span></h2>
+  <p class="subtitle">Profil singkat profesional</p>
+  <div class="hero">
+    <div data-aos="fade-right">
+      <p>
+        Lulusan Sarjana Sistem Informasi dengan ketertarikan pada
+        pengembangan sistem berbasis web, pengelolaan data,
+        serta penerapan teknologi informasi untuk kebutuhan organisasi dan UMKM.
+      </p>
+    </div>
+    <img src="img/profile.jpeg" data-aos="fade-left">
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <h2>Education</h2>
+  <p class="subtitle">Riwayat pendidikan formal</p>
+  <div class="grid">
+    <div class="card edu" data-aos="fade-up">
+      <img src="img/university.png">
+      <div>
+        <h3>S1 Sistem Informasi</h3>
+        <p>Universitas Subang</p>
+        <small>2021 – 2025</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT -->
+<section id="project">
+  <h2>My <span>Projects</span></h2>
+  <p class="subtitle">Beberapa proyek yang pernah dikerjakan</p>
+  <div class="grid">
+    <div class="card" data-aos="fade-up">
+      <img src="img/project1.jpeg">
+      <h3>Sistem Informasi UMKM</h3>
+      <p>Website layanan dan pendataan UMKM</p>
+    </div>
+    <div class="card" data-aos="fade-up">
+      <img src="img/project2.jpg">
+      <h3>Website Company Profile</h3>
+      <p>Desain modern dan responsif</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Work <span>Experience</span></h2>
+  <p class="subtitle">Pengalaman kerja profesional</p>
+  <div class="grid">
+    <div class="card" data-aos="fade-up">
+      <img src="img/work.jpg">
+      <h3>Operator Produksi PLUT KUMKM</h3>
+      <p>Unit kemasan & produksi UMKM</p>
+    </div>
+  </div>
+</section>
+
+<!-- ORGANIZATION -->
+<section id="organization">
+  <h2>Organization <span>Experience</span></h2>
+  <p class="subtitle">Pengalaman organisasi & kepanitiaan</p>
+  <div class="grid">
+    <div class="card" data-aos="fade-up">
+      <img src="img/org1.jpg">
+      <h3>Panitia Pemungutan Suara (PPS)</h3>
+      <p>Bertugas dalam pelaksanaan pemungutan dan penghitungan suara.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATE -->
+<section id="certificate">
+  <h2>Certifications</h2>
+  <p class="subtitle">Akademik & Profesional</p>
+  <div class="grid">
+    <div class="card"><img src="img/cisco.png"><h3>Cisco Networking Academy</h3></div>
+    <div class="card"><img src="img/eptus.jpeg"><h3>EPTUS English Proficiency</h3></div>
+    <div class="card"><img src="img/microsoft.JPG"><h3>Microsoft Office & SPSS</h3></div>
+  </div>
+</section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <h2>Get In Touch</h2>
-  <p class="subtitle">Interested in collaborating or learning more about my work? Feel free to reach out!</p>
-
-  <div class="contact-card" data-aos="fade-up">
+  <p class="subtitle">Interested in collaborating or learning more about my work?</p>
+  <div class="contact-card">
     <div class="contact-grid">
       <div class="contact-item">
         <i class="fa-solid fa-envelope"></i>
-        <div>
-          <span>Email</span>
-          <strong>ibnuahmad0033@gmail.com</strong>
-        </div>
+        <strong>ibnuahmad0033@gmail.com</strong>
       </div>
-
-      <div class="contact-item">
-        <i class="fa-solid fa-phone"></i>
-        <div>
-          <span>Phone</span>
-          <strong>08xxxxxxxxxx</strong>
-        </div>
-      </div>
-
-      <div class="contact-item">
-        <i class="fa-brands fa-linkedin"></i>
-        <div>
-          <span>LinkedIn</span>
-          <strong>linkedin.com/in/ibnuahmad</strong>
-        </div>
-      </div>
-
       <div class="contact-item">
         <i class="fa-solid fa-location-dot"></i>
-        <div>
-          <span>Location</span>
-          <strong>Subang, Indonesia</strong>
-        </div>
+        <strong>Subang, Indonesia</strong>
       </div>
-    </div>
-
-    <div class="contact-actions">
-      <a href="mailto:ibnuahmad0033@gmail.com">
-        <i class="fa-solid fa-envelope"></i> Send Email
-      </a>
-      <a href="#" class="outline">
-        <i class="fa-brands fa-linkedin"></i> Connect on LinkedIn
-      </a>
     </div>
   </div>
 </section>
@@ -294,9 +355,7 @@ footer a{margin:0 10px;color:var(--text);font-size:22px}
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
 AOS.init({duration:900, once:true});
-function toggleDark(){
-  document.body.classList.toggle('dark');
-}
+function toggleDark(){document.body.classList.toggle('dark')}
 </script>
 
 </body>
