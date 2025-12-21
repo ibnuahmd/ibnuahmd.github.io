@@ -4,221 +4,300 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ibnu Ahmad Yuswandana | Portfolio Sistem Informasi</title>
+<title>Ibnu Ahmad Yuswandana | System Information Portfolio</title>
 
 <!-- SEO -->
-<meta name="description" content="Portfolio Ibnu Ahmad Yuswandana, Sarjana Sistem Informasi. Fokus Web, Sistem Informasi, UMKM.">
-<meta name="keywords" content="Portfolio Sistem Informasi, Web Developer, UMKM, Subang">
+<meta name="description" content="Portfolio Ibnu Ahmad Yuswandana, Sarjana Sistem Informasi. Fokus Web Development, Sistem Informasi, dan UMKM Digital.">
+<meta name="keywords" content="Portfolio Sistem Informasi, Web Developer UMKM, Ibnu Ahmad Yuswandana">
 <meta name="author" content="Ibnu Ahmad Yuswandana">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ibnuahmd.github.io/">
 
-<!-- Schema.org -->
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"Person",
- "name":"Ibnu Ahmad Yuswandana",
- "jobTitle":"System Information Graduate",
- "url":"https://ibnuahmd.github.io",
- "sameAs":["https://github.com/","https://linkedin.com/"]
-}
-</script>
+<!-- Open Graph -->
+<meta property="og:title" content="Ibnu Ahmad Yuswandana | Portfolio">
+<meta property="og:description" content="System Information Graduate | Web • System • Data">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/cover.JPG">
 
-<!-- Fonts -->
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Preload -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+<link rel="preload" href="img/cover.JPG" as="image">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 <style>
 :root{
- --primary:#2563eb;
- --bg:#ffffff;
- --text:#1f2937;
- --muted:#6b7280;
- --card:#f8fafc;
-}
-@media (prefers-color-scheme: dark){
- body{background:#0f172a;color:#e5e7eb}
+  --accent:#38bdf8;
+  --bg:#020617;
+  --card:#020617;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --border:rgba(255,255,255,.08);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;scroll-behavior:smooth}
-
-/* NAVBAR */
-nav{
- position:fixed;top:0;width:100%;
- background:rgba(255,255,255,.9);
- backdrop-filter:blur(10px);
- display:flex;justify-content:space-between;
- padding:18px 8%;z-index:1000;
- transition:.3s;
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  background:radial-gradient(circle at top,#020617,#000);
+  color:var(--text);
+  line-height:1.7;
 }
-nav.scrolled{box-shadow:0 4px 20px rgba(0,0,0,.1)}
-nav a{margin-left:20px;text-decoration:none;color:var(--text);font-size:14px}
+
+/* NAV */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  backdrop-filter:blur(16px);
+  background:rgba(2,6,23,.75);
+  border-bottom:1px solid var(--border);
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  z-index:1000;
+}
+nav strong{font-weight:600}
+nav a{
+  margin-left:24px;
+  text-decoration:none;
+  color:var(--muted);
+  font-size:14px;
+}
+nav a:hover{color:#fff}
 
 /* HERO */
-.cover{
- height:100vh;
- background:linear-gradient(rgba(15,23,42,.75),rgba(15,23,42,.75)),
- url('img/cover.JPG') center/cover no-repeat;
- display:flex;align-items:center;
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding:140px 8% 80px;
 }
-.cover-content{margin-left:8%;max-width:650px}
-.cover h1{color:#fff;font-size:46px}
-.cover p{color:#e5e7eb;margin-top:15px;font-size:18px}
-#typing{font-weight:600;color:#93c5fd}
-
-/* SCROLL */
-.scroll{
- position:absolute;bottom:30px;left:50%;
- transform:translateX(-50%);
- animation:updown 1.5s infinite;
- color:#fff;font-size:22px;
+.hero-card{
+  max-width:720px;
+  background:rgba(255,255,255,.03);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:50px;
 }
-@keyframes updown{0%{transform:translate(-50%,0)}50%{transform:translate(-50%,10px)}}
+.badge{
+  display:inline-block;
+  background:rgba(56,189,248,.15);
+  color:var(--accent);
+  padding:6px 14px;
+  border-radius:999px;
+  font-size:13px;
+  margin-bottom:20px;
+}
+.hero h1{
+  font-size:46px;
+  line-height:1.2;
+}
+.hero h1 span{color:var(--accent)}
+.hero p{
+  margin:20px 0 35px;
+  color:var(--muted);
+}
+.hero-actions a{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 28px;
+  border-radius:14px;
+  text-decoration:none;
+  margin-right:15px;
+  font-size:14px;
+}
+.primary{
+  background:var(--accent);
+  color:#020617;
+}
+.outline{
+  border:1px solid var(--border);
+  color:#fff;
+}
 
 /* SECTION */
-section{padding:110px 8%}
-h2{font-size:30px;margin-bottom:10px}
-.subtitle{color:var(--muted);margin-bottom:40px}
+section{
+  padding:110px 8%;
+}
+section h2{
+  font-size:32px;
+  margin-bottom:10px;
+}
+.subtitle{
+  color:var(--muted);
+  margin-bottom:50px;
+}
 
 /* GRID */
 .grid{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
- gap:30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
 }
 
 /* CARD */
 .card{
- background:var(--card);
- padding:25px;border-radius:14px;
- transition:.3s;
+  background:rgba(255,255,255,.03);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:28px;
+  transition:.3s;
 }
-.card:hover{transform:translateY(-6px);box-shadow:0 15px 30px rgba(0,0,0,.1)}
+.card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(56,189,248,.4);
+}
+.card h3{margin-bottom:8px}
+.card p{color:var(--muted);font-size:14px}
 
-/* TIMELINE */
-.timeline{border-left:3px solid var(--primary);padding-left:30px}
-.timeline-item{margin-bottom:30px}
+/* SKILLS */
+.skill span{
+  display:block;
+  font-size:13px;
+  color:var(--muted);
+}
 
 /* CONTACT */
 .contact{
- background:linear-gradient(135deg,#0f172a,#1e293b);
- color:#fff;text-align:center;
+  background:linear-gradient(135deg,#020617,#020617,#020617);
 }
-.contact a{color:#93c5fd;margin:0 12px;font-size:26px}
+.contact-box{
+  max-width:900px;
+  margin:auto;
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:50px;
+  text-align:center;
+}
+.contact-box a{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  margin:15px;
+  padding:14px 28px;
+  border-radius:14px;
+  text-decoration:none;
+  color:#fff;
+  border:1px solid var(--border);
+}
 
 /* FOOTER */
-footer{text-align:center;padding:30px;color:#6b7280}
+footer{
+  border-top:1px solid var(--border);
+  padding:40px 8%;
+  text-align:center;
+  color:var(--muted);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1{font-size:34px}
+  nav{padding:16px 6%}
+}
 </style>
 </head>
 
 <body>
 
-<nav id="nav">
-<strong>Ibnu Ahmad</strong>
-<div>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#experience">Experience</a>
-<a href="#education">Education</a>
-<a href="#contact">Contact</a>
-</div>
+<nav>
+  <strong>Ibnu Ahmad</strong>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#project">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
 <!-- HERO -->
-<section class="cover">
-<div class="cover-content">
-<h1>Ibnu Ahmad Yuswandana</h1>
-<p id="typing"></p>
-<p>Membangun solusi sistem informasi yang efektif untuk UMKM & organisasi.</p>
-</div>
-<div class="scroll"><i class="fa fa-angle-down"></i></div>
+<section class="hero">
+  <div class="hero-card" data-aos="fade-up">
+    <span class="badge">System Information Graduate</span>
+    <h1>Building <span>Web & Information Systems</span> for UMKM</h1>
+    <p>Membangun solusi sistem informasi yang efektif, terstruktur, dan berorientasi kebutuhan organisasi.</p>
+    <div class="hero-actions">
+      <a href="#project" class="primary"><i class="fa-solid fa-layer-group"></i> View Projects</a>
+      <a href="#contact" class="outline"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+    </div>
+  </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-<h2>About Me</h2>
-<p class="subtitle">Sarjana Sistem Informasi</p>
-<p>Berpengalaman dalam pengembangan sistem informasi berbasis web dan digitalisasi UMKM.</p>
-<p>📈 Membantu peningkatan efisiensi layanan</p>
-<p>🗂️ Terlibat dalam pengelolaan data usaha</p>
+  <h2>About</h2>
+  <p class="subtitle">Profil singkat profesional</p>
+  <div class="grid">
+    <div class="card">
+      <p>
+        Lulusan S1 Sistem Informasi dengan fokus pada pengembangan web,
+        analisis sistem, serta penerapan teknologi untuk UMKM dan organisasi.
+      </p>
+    </div>
+  </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-<h2>Skills</h2>
-<div class="grid">
-<div class="card"><strong>💻 Technical</strong><br>HTML, CSS, Laravel, MySQL</div>
-<div class="card"><strong>📊 Data & Tools</strong><br>SPSS, Excel, GitHub</div>
-<div class="card"><strong>🧩 Soft Skills</strong><br>Analisis, Komunikasi, Problem Solving</div>
-</div>
+  <h2>Skills</h2>
+  <p class="subtitle">Kompetensi utama</p>
+  <div class="grid">
+    <div class="card skill">
+      <h3>💻 Technical</h3>
+      <span>HTML, CSS, JavaScript</span>
+      <span>Laravel, MySQL</span>
+    </div>
+    <div class="card skill">
+      <h3>📊 Data & Tools</h3>
+      <span>SPSS, Excel</span>
+      <span>GitHub</span>
+    </div>
+    <div class="card skill">
+      <h3>🧠 Soft Skills</h3>
+      <span>System Analysis</span>
+      <span>Problem Solving</span>
+    </div>
+  </div>
 </section>
 
 <!-- PROJECT -->
-<section id="projects">
-<h2>Projects</h2>
-<div class="grid">
-<div class="card">
-<h3>Sistem Informasi UMKM</h3>
-<p>Masalah: Pendataan manual</p>
-<p>Solusi: Website terintegrasi</p>
-<p>Tools: Laravel, MySQL</p>
-</div>
-</div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-<h2>Experience</h2>
-<div class="timeline">
-<div class="timeline-item">
-<h4>Operator Produksi PLUT</h4>
-<p>Unit kemasan & digitalisasi data UMKM</p>
-</div>
-</div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-<h2>Education</h2>
-<div class="timeline">
-<div class="timeline-item">
-<h4>2021–2025</h4>
-<p>S1 Sistem Informasi – Universitas Subang</p>
-</div>
-</div>
+<section id="project">
+  <h2>Projects</h2>
+  <p class="subtitle">Case study pilihan</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Sistem Informasi UMKM</h3>
+      <p>• Masalah: Pendataan manual<br>
+         • Solusi: Web-based system<br>
+         • Tools: Laravel, MySQL</p>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
-<h2>Contact</h2>
-<a href="mailto:ibnuahmad0033@gmail.com"><i class="fa fa-envelope"></i></a>
-<a href="https://wa.me/62xxxxxxxxxx"><i class="fa fa-whatsapp"></i></a>
-<a href="https://github.com/"><i class="fa fa-github"></i></a>
-<a href="https://linkedin.com/"><i class="fa fa-linkedin"></i></a>
+  <div class="contact-box">
+    <h2>Get In Touch</h2>
+    <p class="subtitle">Terbuka untuk kerja sama & peluang profesional</p>
+    <a href="mailto:ibnuahmad0033@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
+    <a href="#"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+    <a href="#"><i class="fa-brands fa-github"></i>GitHub</a>
+  </div>
 </section>
 
 <footer>
-© 2025 Ibnu Ahmad Yuswandana
+  © 2025 Ibnu Ahmad Yuswandana
 </footer>
 
-<script>
-// typing
-const text="Web Developer • System Analyst • UMKM Tech";
-let i=0;
-setInterval(()=>{
-document.getElementById("typing").innerHTML=text.substring(0,i++);
-if(i>text.length)i=0;
-},120);
-
-// navbar scroll
-window.addEventListener("scroll",()=>{
-document.getElementById("nav").classList.toggle("scrolled",window.scrollY>50);
-});
-</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration:900,once:true})</script>
 
 </body>
 </html>
