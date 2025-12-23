@@ -6,9 +6,6 @@
 
 <title>Ibnu Ahmad Yuswandana | Portfolio</title>
 
-<meta name="description" content="Portfolio Ibnu Ahmad Yuswandana — Information Systems Graduate & Web Developer">
-<meta name="author" content="Ibnu Ahmad Yuswandana">
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -18,7 +15,6 @@
   --text:#111827;
   --muted:#6b7280;
   --border:#e5e7eb;
-  --accent:#2563eb;
 }
 .dark{
   --bg:#0f172a;
@@ -56,12 +52,12 @@ nav{
   align-items:center;
 }
 nav a{
-  margin-left:16px;
+  margin-left:18px;
   font-size:14px;
   text-decoration:none;
   color:var(--text);
 }
-nav a:hover{color:var(--accent)}
+nav a:hover{color:#2563eb}
 .toggle{cursor:pointer;margin-left:12px}
 
 /* ================= COVER ================= */
@@ -78,12 +74,9 @@ nav a:hover{color:var(--accent)}
   margin:auto;
   padding:0 20px;
   color:#fff;
-  animation:fadeUp 1s ease forwards;
 }
-.cover h1{font-size:42px}
-.cover p{margin-top:10px;font-size:18px;opacity:.9}
 
-/* ================= SECTION ================= */
+/* ================= SECTION + ANIMATION ================= */
 section{
   max-width:1000px;
   margin:auto;
@@ -114,15 +107,6 @@ section h2{
   box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
-/* ================= LIST ================= */
-.list{display:grid;gap:16px}
-.item{
-  display:flex;
-  justify-content:space-between;
-  border-bottom:1px solid var(--border);
-  padding-bottom:10px;
-}
-
 /* ================= GRID ================= */
 .grid{
   display:grid;
@@ -134,10 +118,6 @@ section h2{
   border-radius:14px;
   padding:20px;
   background:var(--bg);
-  transition:.3s;
-}
-.card:hover{
-  transform:translateY(-6px);
 }
 
 /* ================= CERTIFICATE ================= */
@@ -170,7 +150,7 @@ section h2{
   text-align:center;
 }
 
-/* ================= MODAL ZOOM ================= */
+/* ================= MODAL ================= */
 .modal{
   position:fixed;
   inset:0;
@@ -205,7 +185,6 @@ section h2{
 }
 .contact i{font-size:20px}
 
-/* ================= FOOTER ================= */
 footer{
   border-top:1px solid var(--border);
   text-align:center;
@@ -213,15 +192,8 @@ footer{
   color:var(--muted);
 }
 
-/* ================= ANIMATION ================= */
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(40px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
 @media(max-width:768px){
   .about{grid-template-columns:1fr}
-  .cover h1{font-size:32px}
 }
 </style>
 </head>
@@ -246,7 +218,6 @@ footer{
   </div>
 </nav>
 
-<!-- HOME -->
 <section class="cover show">
   <div class="content">
     <h1 data-id="Ibnu Ahmad Yuswandana" data-en="Ibnu Ahmad Yuswandana"></h1>
@@ -277,7 +248,6 @@ footer{
   </div>
 </section>
 
-<!-- MODAL -->
 <div class="modal" id="modal">
   <span onclick="closeModal()">✕</span>
   <img id="modalImg">
@@ -291,7 +261,7 @@ function toggleDark(){
   document.body.classList.toggle('dark');
 }
 
-/* LANGUAGE TOGGLE */
+/* LANGUAGE */
 let lang='id';
 function toggleLang(){
   lang = lang === 'id' ? 'en' : 'id';
@@ -310,7 +280,7 @@ window.addEventListener('scroll',()=>{
   });
 });
 
-/* CERTIFICATE MODAL */
+/* MODAL */
 function openModal(card){
   document.getElementById('modal').style.display='flex';
   document.getElementById('modalImg').src=card.querySelector('img').src;
