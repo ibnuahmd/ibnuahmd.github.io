@@ -7,6 +7,7 @@
 <title>Ibnu Ahmad Yuswandana | Portfolio</title>
 
 <meta name="description" content="Portfolio Ibnu Ahmad Yuswandana — Information Systems Graduate & Web Developer">
+<meta name="author" content="Ibnu Ahmad Yuswandana">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -128,13 +129,12 @@ section h2{
   background:var(--bg);
 }
 
-/* ===== CERTIFICATE (FIXED) ===== */
+/* ===== CERTIFICATE (UPDATED & FIXED) ===== */
 .certificate-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:24px;
 }
-
 .certificate-card{
   border:1px solid var(--border);
   border-radius:16px;
@@ -142,18 +142,15 @@ section h2{
   background:var(--bg);
   transition:.3s ease;
 }
-
 .certificate-card:hover{
   transform:translateY(-6px);
   box-shadow:0 15px 40px rgba(0,0,0,.12);
 }
-
 .certificate-card img{
   width:100%;
-  height:160px;              /* 🔥 KUNCI UKURAN */
-  object-fit:cover;          /* rapi & konsisten */
+  height:160px;
+  object-fit:cover;
 }
-
 .certificate-card .caption{
   padding:14px;
   font-size:14px;
@@ -206,13 +203,77 @@ footer{
   </div>
 </nav>
 
-<section class="cover">
+<!-- HOME -->
+<section class="cover" id="home">
   <div class="content">
     <h1>Ibnu Ahmad Yuswandana</h1>
     <p>Information Systems Graduate • Web Developer</p>
   </div>
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about">
+    <p>
+      Lulusan Sistem Informasi dengan minat pada pengembangan
+      sistem berbasis web, pengelolaan data, dan solusi digital
+      untuk UMKM dan organisasi.
+    </p>
+    <img src="img/profile.jpeg" alt="Profile">
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <h2>Education</h2>
+  <div class="list">
+    <div class="item"><strong>SDN Sukamaju</strong><span>—</span></div>
+    <div class="item"><strong>MTsN 1 Subang</strong><span>—</span></div>
+    <div class="item"><strong>MAN 1 Subang</strong><span>—</span></div>
+    <div class="item">
+      <strong>Universitas Subang — Sistem Informasi</strong>
+      <span>2021–2025</span>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card"><strong>Technical</strong><p>HTML, CSS, Laravel, MySQL</p></div>
+    <div class="card"><strong>Tools & Data</strong><p>SPSS, Excel, GitHub</p></div>
+    <div class="card"><strong>Soft Skills</strong><p>Analytical Thinking, Communication</p></div>
+  </div>
+</section>
+
+<!-- PROJECT -->
+<section id="project">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="img/project1.jpg">
+      <strong>Sistem Informasi UMKM</strong>
+      <p>Masalah: Manual<br>Solusi: Website<br>Tools: Laravel</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Experience</h2>
+  <p><strong>Operator Produksi</strong> — PLUT KUMKM Subang<br>
+  Bertanggung jawab pada unit kemasan dan produksi UMKM.</p>
+</section>
+
+<!-- ORGANIZATION -->
+<section id="organization">
+  <h2>Organization</h2>
+  <p><strong>HIMASI</strong> — Anggota</p>
+</section>
+
+<!-- CERTIFICATE (UPDATED) -->
 <section id="certificate">
   <h2>Certificates</h2>
   <div class="certificate-grid">
@@ -235,7 +296,19 @@ footer{
   </div>
 </section>
 
-<footer>© 2025 Ibnu Ahmad Yuswandana</footer>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact">
+    <a href="mailto:ibnuahmad0033@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
+    <a href="https://github.com/ibnuahmd" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
+    <a href="https://linkedin.com/in/ibnuahmad" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  © 2025 Ibnu Ahmad Yuswandana
+</footer>
 
 <script>
 function toggleDark(){
