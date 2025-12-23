@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ibnu Ahmad Yuswandana</title>
+
+<meta name="description" content="Ibnu Ahmad Yuswandana — Information Systems Graduate & Web Developer">
+<meta name="author" content="Ibnu Ahmad Yuswandana">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+}
+.dark{
+  --bg:#0f172a;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --border:#1e293b;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+
+/* Layout */
+.container{
+  max-width:880px;
+  margin:auto;
+  padding:80px 20px;
+}
+
+/* Header */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid var(--border);
+  padding:24px 0;
+}
+header strong{font-size:18px}
+header button{
+  background:none;
+  border:none;
+  cursor:pointer;
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* Hero */
+.hero h1{
+  font-size:36px;
+  font-weight:700;
+}
+.hero p{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:16px;
+}
+
+/* Section */
+section{
+  margin-top:80px;
+}
+section h2{
+  font-size:22px;
+  margin-bottom:20px;
+}
+
+/* List */
+.list{
+  display:grid;
+  gap:14px;
+}
+.list-item{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+.list-item span{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* Project */
+.project{
+  border-left:2px solid var(--border);
+  padding-left:16px;
+}
+.project h3{
+  font-size:16px;
+  font-weight:600;
+}
+.project p{
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* Footer */
+footer{
+  margin-top:100px;
+  padding-top:30px;
+  border-top:1px solid var(--border);
+  font-size:14px;
+  color:var(--muted);
+}
+footer a{
+  color:var(--text);
+  margin-right:14px;
+  text-decoration:none;
+}
+footer a:hover{text-decoration:underline}
+
+/* Responsive */
+@media(max-width:640px){
+  .hero h1{font-size:28px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+  <strong>Ibnu Ahmad Yuswandana</strong>
+  <button onclick="toggleDark()">Dark / Light</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Information Systems Graduate</h1>
+  <p>Web Developer · System Analyst · UMKM Technology</p>
+</section>
+
+<!-- ABOUT -->
+<section>
+  <h2>About</h2>
+  <p>
+    I am a graduate of Information Systems with an interest in building
+    efficient, structured, and practical web-based information systems,
+    especially for UMKM and organizations.
+  </p>
+</section>
+
+<!-- EDUCATION -->
+<section>
+  <h2>Education</h2>
+  <div class="list">
+    <div class="list-item">
+      <div>
+        <strong>Universitas Subang</strong><br>
+        <span>S1 Sistem Informasi</span>
+      </div>
+      <span>2021 – 2025</span>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+  <h2>Skills</h2>
+  <div class="list">
+    <div class="list-item">
+      <strong>Technical</strong>
+      <span>HTML, CSS, Laravel, MySQL</span>
+    </div>
+    <div class="list-item">
+      <strong>Tools & Data</strong>
+      <span>SPSS, Excel, GitHub</span>
+    </div>
+    <div class="list-item">
+      <strong>Soft Skills</strong>
+      <span>Analysis, Communication</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>UMKM Information System</h3>
+    <p>
+      Manual data management → Web-based system<br>
+      Tools: Laravel, MySQL
+    </p>
+  </div>
+
+  <div class="project" style="margin-top:20px">
+    <h3>Company Profile Website</h3>
+    <p>
+      Modern responsive corporate website<br>
+      Tools: HTML, CSS
+    </p>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section>
+  <h2>Experience</h2>
+  <div class="list">
+    <div class="list-item">
+      <div>
+        <strong>Production Operator</strong><br>
+        <span>PLUT KUMKM Subang</span>
+      </div>
+      <span>2024</span>
+    </div>
+  </div>
+</section>
+
+<!-- ORGANIZATION -->
+<section>
+  <h2>Organization</h2>
+  <div class="list">
+    <div class="list-item">
+      <div>
+        <strong>HIMASI</strong><br>
+        <span>Member</span>
+      </div>
+      <span>2022 – 2023</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section>
+  <h2>Contact</h2>
+  <p>Email: ibnuahmad0033@gmail.com</p>
+  <p>GitHub: github.com/ibnuahmd</p>
+  <p>LinkedIn: linkedin.com/in/ibnuahmad</p>
+</section>
+
+<footer>
+  © 2025 Ibnu Ahmad Yuswandana
+</footer>
+
+</div>
+
+<script>
+function toggleDark(){
+  document.body.classList.toggle('dark');
+}
+</script>
+
+</body>
+</html>
