@@ -41,7 +41,6 @@ nav{
   background:rgba(255,255,255,.8);
   backdrop-filter:blur(12px);
   z-index:1000;
-  transition:.3s;
 }
 .dark nav{background:rgba(15,23,42,.8)}
 .nav{
@@ -61,15 +60,19 @@ nav a, nav span{
 }
 nav a:hover, nav span:hover{color:var(--primary)}
 
-/* HERO */
+/* HERO WITH COVER */
 .hero{
   height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('img/cover.JPG') center/cover no-repeat; /* 🔥 FOTO COVER */
   display:flex;
   align-items:center;
   text-align:center;
+  color:#fff;
 }
 .hero h1{font-size:48px}
-.hero p{margin-top:12px;font-size:18px;color:var(--muted)}
+.hero p{margin-top:12px;font-size:18px;opacity:.9}
 
 /* SECTION */
 section{
@@ -82,7 +85,7 @@ h2{
   margin-bottom:40px;
 }
 
-/* SMOOTH ANIMATION */
+/* ANIMATION */
 .fade{
   opacity:0;
   transform:translateY(40px) scale(.97);
@@ -101,9 +104,7 @@ h2{
   box-shadow:0 12px 32px rgba(0,0,0,.08);
   transition:.4s;
 }
-.card:hover{
-  transform:translateY(-6px);
-}
+.card:hover{transform:translateY(-6px)}
 
 /* ABOUT */
 .about{
@@ -124,6 +125,18 @@ h2{
   gap:24px;
 }
 
+/* EXPERIENCE */
+.experience-card{
+  display:flex;
+  gap:24px;
+  align-items:center;
+}
+.experience-card img{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+}
+
 /* CERTIFICATE */
 .cert img{
   width:100%;
@@ -134,18 +147,23 @@ h2{
   cursor:pointer;
 }
 
-/* CONTACT */
+/* CONTACT CENTER */
+.contact{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
+}
 .contact a{
   display:flex;
   align-items:center;
-  gap:14px;
-  margin-bottom:14px;
+  gap:12px;
+  font-size:18px;
   text-decoration:none;
   color:var(--text);
-  font-size:16px;
 }
 
-/* MODAL ZOOM */
+/* MODAL */
 #modal{
   position:fixed;
   inset:0;
@@ -170,6 +188,7 @@ footer{
 @media(max-width:768px){
   .about{grid-template-columns:1fr}
   .hero h1{font-size:36px}
+  .experience-card{flex-direction:column;text-align:center}
 }
 </style>
 </head>
@@ -180,13 +199,13 @@ footer{
   <div class="nav">
     <strong>Ibnu Ahmad Yuswandana</strong>
     <div>
-      <a href="#about" data-id="About" data-en="About">About</a>
-      <a href="#education" data-id="Education" data-en="Education">Education</a>
-      <a href="#skills" data-id="Skills" data-en="Skills">Skills</a>
-      <a href="#experience" data-id="Experience" data-en="Experience">Experience</a>
-      <a href="#organization" data-id="Organization" data-en="Organization">Organization</a>
-      <a href="#certificate" data-id="Certificate" data-en="Certificate">Certificate</a>
-      <a href="#contact" data-id="Contact" data-en="Contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#organization">Organization</a>
+      <a href="#certificate">Certificate</a>
+      <a href="#contact">Contact</a>
       <span onclick="toggleLang()">ID / EN</span>
       <span onclick="toggleDark()">🌙</span>
     </div>
@@ -212,7 +231,7 @@ footer{
        data-en="I am an Information Systems graduate with interest in web development and digital solutions.">
        Saya adalah lulusan Sistem Informasi dengan minat pada pengembangan web dan solusi digital.
     </p>
-    <img src="img/profile.jpeg">
+    <img src="img/profile.jpg">
   </div>
 </section>
 
@@ -236,22 +255,15 @@ footer{
   </div>
 </section>
 
-<!-- PROJECT -->
-<section id="project" class="fade">
-  <h2>Projects</h2>
-  <div class="grid">
-    <div class="card"><img src="img/p1.jpg"><p>Sistem Informasi UMKM</p></div>
-    <div class="card"><img src="img/p2.jpg"><p>Website Konsultasi</p></div>
-    <div class="card"><img src="img/p3.jpg"><p>Presensi Geolocation</p></div>
-    <div class="card"><img src="img/p4.jpg"><p>Dashboard Data</p></div>
-  </div>
-</section>
-
 <!-- EXPERIENCE -->
 <section id="experience" class="fade">
   <h2>Experience</h2>
-  <div class="card">
-    Operator Produksi – PLUT KUMKM Subang (2023–2024)
+  <div class="card experience-card">
+    <img src="img/plut-logo.png"> <!-- 🔥 logo instansi -->
+    <div>
+      <strong>PLUT KUMKM Subang</strong>
+      <p>Operator Produksi (2023–2024)</p>
+    </div>
   </div>
 </section>
 
@@ -276,9 +288,9 @@ footer{
 <section id="contact" class="fade">
   <h2>Contact</h2>
   <div class="contact">
-    <a href="https://www.instagram.com/ibnuahmd__?igsh=dndnaWpmbjRlN3F5"><i class="fab fa-instagram"></i>Instagram</a>
-    <a href="https://github.com/ibnuahmd"><i class="fab fa-github"></i>GitHub</a>
-    <a href="https://www.linkedin.com/in/ibnu-ahmad-yuswandana-814a942a8/"><i class="fab fa-linkedin"></i>LinkedIn</a>
+    <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+    <a href="#"><i class="fab fa-github"></i>GitHub</a>
+    <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
     <a href="mailto:ibnuahmad0033@gmail.com"><i class="fa fa-envelope"></i>Email</a>
   </div>
 </section>
