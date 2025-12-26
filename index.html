@@ -152,15 +152,21 @@ h2{
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:18px;
+  gap:20px;
 }
 .contact a{
   display:flex;
   align-items:center;
+  justify-content:center;
   gap:12px;
   font-size:18px;
   text-decoration:none;
   color:var(--text);
+  text-align:center;
+}
+
+.contact i{
+  font-size:22px;
 }
 
 /* MODAL */
@@ -259,7 +265,7 @@ footer{
 <section id="experience" class="fade">
   <h2>Experience</h2>
   <div class="card experience-card">
-    <img src="img/plut-logo.png"> <!-- 🔥 logo instansi -->
+    <img src="img/plut.JPG"> <!-- 🔥 logo instansi -->
     <div>
       <strong>PLUT KUMKM Subang</strong>
       <p>Operator Produksi (2023–2024)</p>
@@ -288,10 +294,22 @@ footer{
 <section id="contact" class="fade">
   <h2>Contact</h2>
   <div class="contact">
-    <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
-    <a href="#"><i class="fab fa-github"></i>GitHub</a>
-    <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
-    <a href="mailto:ibnuahmad0033@gmail.com"><i class="fa fa-envelope"></i>Email</a>
+    <a href="https://instagram.com/" target="_blank">
+      <i class="fab fa-instagram"></i>
+      <span>Instagram</span>
+    </a>
+    <a href="https://github.com/" target="_blank">
+      <i class="fab fa-github"></i>
+      <span>GitHub</span>
+    </a>
+    <a href="https://linkedin.com/" target="_blank">
+      <i class="fab fa-linkedin"></i>
+      <span>LinkedIn</span>
+    </a>
+    <a href="mailto:ibnuahmad0033@gmail.com">
+      <i class="fa fa-envelope"></i>
+      <span>Email</span>
+    </a>
   </div>
 </section>
 
