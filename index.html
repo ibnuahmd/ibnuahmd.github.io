@@ -60,12 +60,12 @@ nav a, nav span{
 }
 nav a:hover, nav span:hover{color:var(--primary)}
 
-/* HERO WITH COVER */
+/* HERO */
 .hero{
   height:100vh;
   background:
     linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-    url('img/cover.JPG') center/cover no-repeat; /* 🔥 FOTO COVER */
+    url('img/cover.JPG') center/cover no-repeat;
   display:flex;
   align-items:center;
   text-align:center;
@@ -147,14 +147,13 @@ h2{
   cursor:pointer;
 }
 
-/* CONTACT CENTER */
+/* CONTACT */
 .contact{
   display:flex;
   flex-direction:column;
   align-items:center;
   gap:20px;
 }
-
 .contact a{
   display:flex;
   align-items:center;
@@ -163,13 +162,7 @@ h2{
   font-size:18px;
   text-decoration:none;
   color:var(--text);
-  text-align:center;
 }
-
-.contact i{
-  font-size:22px;
-}
-
 
 /* MODAL */
 #modal{
@@ -210,6 +203,7 @@ footer{
       <a href="#about">About</a>
       <a href="#education">Education</a>
       <a href="#skills">Skills</a>
+      <a href="#project">Project</a>
       <a href="#experience">Experience</a>
       <a href="#organization">Organization</a>
       <a href="#certificate">Certificate</a>
@@ -235,10 +229,9 @@ footer{
 <section id="about" class="fade">
   <h2 data-id="Tentang Saya" data-en="About Me">Tentang Saya</h2>
   <div class="about">
-    <p data-id="Saya adalah lulusan Sistem Informasi dengan minat pada pengembangan web dan solusi digital."
-       data-en="I am an Information Systems graduate with interest in web development and digital solutions.">
-     Saya Ibnu Ahmad Yuswandana, saya adalah lulusan Sistem Informasi di Universitas Subang. Saya memiliki minat dan ketertarikan pada pengembangan sistem berbasis web, pengelolaan data, serta pemanfaatan teknologi informasi sebagai solusi digital bagi organisasi dan UMKM.
-Selama masa studi, saya terbiasa mengerjakan berbagai proyek yang berkaitan dengan perancangan dan pengembangan aplikasi web, analisis kebutuhan sistem, serta pengolahan data. Saya memiliki pemahaman dasar hingga menengah dalam penggunaan teknologi seperti HTML, CSS, Laravel, MySQL, serta alat pendukung seperti GitHub, Excel, dan SPSS.
+    <p data-id="Saya Ibnu Ahmad Yuswandana, saya adalah lulusan Sistem Informasi di Universitas Subang. Saya memiliki minat pada pengembangan web, pengolahan data, dan solusi digital untuk organisasi dan UMKM."
+       data-en="I am Ibnu Ahmad Yuswandana, an Information Systems graduate from Universitas Subang with interests in web development, data processing, and digital solutions.">
+      Saya Ibnu Ahmad Yuswandana, saya adalah lulusan Sistem Informasi di Universitas Subang. Saya memiliki minat dan ketertarikan pada pengembangan sistem berbasis web, pengelolaan data, serta pemanfaatan teknologi informasi sebagai solusi digital bagi organisasi dan UMKM.
     </p>
     <img src="img/profile.jpeg">
   </div>
@@ -264,11 +257,42 @@ Selama masa studi, saya terbiasa mengerjakan berbagai proyek yang berkaitan deng
   </div>
 </section>
 
+<!-- PROJECT -->
+<section id="project" class="fade">
+  <h2 data-id="Project" data-en="Projects">Project</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="img/p1.jpg" style="width:100%;border-radius:12px;margin-bottom:12px">
+      <strong>Sistem Informasi UMKM</strong>
+      <p>Website pengelolaan data UMKM berbasis web.</p>
+      <small>Laravel, MySQL</small>
+    </div>
+    <div class="card">
+      <img src="img/p2.jpg" style="width:100%;border-radius:12px;margin-bottom:12px">
+      <strong>Website Konsultasi</strong>
+      <p>Sistem penjadwalan dan layanan konsultasi online.</p>
+      <small>HTML, CSS, Laravel</small>
+    </div>
+    <div class="card">
+      <img src="img/p3.jpg" style="width:100%;border-radius:12px;margin-bottom:12px">
+      <strong>Presensi Geolocation</strong>
+      <p>Presensi berbasis lokasi untuk karyawan.</p>
+      <small>Laravel, Maps API</small>
+    </div>
+    <div class="card">
+      <img src="img/p4.jpg" style="width:100%;border-radius:12px;margin-bottom:12px">
+      <strong>Dashboard Data</strong>
+      <p>Visualisasi dan analisis data.</p>
+      <small>Excel, SPSS</small>
+    </div>
+  </div>
+</section>
+
 <!-- EXPERIENCE -->
 <section id="experience" class="fade">
   <h2>Experience</h2>
   <div class="card experience-card">
-    <img src="img/plut.jpg"> <!-- 🔥 logo instansi -->
+    <img src="img/plut.jpg">
     <div>
       <strong>PLUT KUMKM Subang</strong>
       <p>Operator Produksi (2023–2024)</p>
@@ -286,7 +310,7 @@ Selama masa studi, saya terbiasa mengerjakan berbagai proyek yang berkaitan deng
 <section id="certificate" class="fade">
   <h2>Certificate</h2>
   <div class="grid">
-    <div class="card cert"><img src="img/cert1.jpeg" onclick="zoom(this.src)">Eptus</div>
+    <div class="card cert"><img src="img/cert1.jpeg" onclick="zoom(this.src)">EPTUS</div>
     <div class="card cert"><img src="img/cert2.png" onclick="zoom(this.src)">Cisco</div>
     <div class="card cert"><img src="img/cert3.JPG" onclick="zoom(this.src)">Microsoft</div>
     <div class="card cert"><img src="img/c4.jpg" onclick="zoom(this.src)">SPSS</div>
@@ -297,29 +321,15 @@ Selama masa studi, saya terbiasa mengerjakan berbagai proyek yang berkaitan deng
 <section id="contact" class="fade">
   <h2>Contact</h2>
   <div class="contact">
-    <a href="https://instagram.com/" target="_blank">
-      <i class="fab fa-instagram"></i>
-      <span>Instagram</span>
-    </a>
-    <a href="https://github.com/" target="_blank">
-      <i class="fab fa-github"></i>
-      <span>GitHub</span>
-    </a>
-    <a href="https://linkedin.com/" target="_blank">
-      <i class="fab fa-linkedin"></i>
-      <span>LinkedIn</span>
-    </a>
-    <a href="mailto:ibnuahmad0033@gmail.com">
-      <i class="fa fa-envelope"></i>
-      <span>Email</span>
-    </a>
+    <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+    <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+    <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+    <a href="mailto:ibnuahmad0033@gmail.com"><i class="fa fa-envelope"></i>Email</a>
   </div>
 </section>
 
-
 <footer>© 2025 Ibnu Ahmad Yuswandana</footer>
 
-<!-- MODAL -->
 <div id="modal" onclick="this.style.display='none'">
   <img id="modalImg">
 </div>
@@ -342,7 +352,6 @@ function zoom(src){
   document.getElementById('modalImg').src=src;
 }
 
-/* ANIMATION */
 const fades=document.querySelectorAll('.fade');
 window.addEventListener('scroll',()=>{
   fades.forEach(f=>{
